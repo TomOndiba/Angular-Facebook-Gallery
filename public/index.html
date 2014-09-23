@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="Eversnap">
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EverSnap</title>
+	<link href="stylesheets/style.css" rel="stylesheet">
+	<link href="stylesheets/simple-slider.css" rel="stylesheet">
+</head>
+<body>
+	<div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top no-bottom nav-font"
+     role="navigation" style="background: #0085CCl; height:52px;" >
+	  <div class="navbar-header" style="width: 226px; height: 52px">
+	    <a class="navbar-brand brand-hover" href="/#/gallery" style="font-size: 23px; width: 226px; height:100%; background: #036497; color: #B5E6FD">
+	      <span class="glyphicon glyphicon-home" style="font-size: 21px; padding-left: 5px"></span>
+	      <strong>EverSnap</strong></a>
+	  </div>
+	  <ul class="nav navbar-nav">
+<!-- 	    <li ng-class="{ active: $state.includes('home') }">
+	    	<a ui-sref="home">Home</a>
+	    </li> -->
+	    <li ng-class="{ active: $state.includes('gallery') }">
+	    	<a ui-sref="gallery">Gallery</a>
+	    </li>
+	    <li ng-class="{ active: $state.includes('anatomy') }">
+	    	<a ui-sref="anatomy">Gallery Details</a>
+	    </li>
+	  </ul>
+	</div>
+
+<div ui-view></div>
+
+	<script src="vendor/angular.js"></script>
+	<script src="vendor/angular-strap.js"></script>
+	<script src="vendor/angular-strap.tpl.js"></script>
+	<script src="vendor/angular-messages.js"></script>
+	<script src="vendor/angular-resource.js"></script>
+	<script src="vendor/angular-cookies.js"></script>
+	<script src="vendor/moment.min.js"></script>
+	<script src="vendor/angular-ui-router.js"></script>
+  <script src="vendor/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+  
+  <script src="vendor/jquery/dist/jquery.js"></script>
+  <script src="vendor/oauth/oauth.js"></script>
+  
+
+  <!-- Custom -->
+  <script src="controllers/home-ctrl.js"></script>
+	
+	<script src="controllers/gallery-ctrl.js"></script>
+	<script src="controllers/gallery-detail-ctrl.js"></script>
+  	<script src="controllers/navbar.js"></script>
+
+	<script src="services/anatomy-service.js"></script>
+	<script src="services/gallery-service.js"></script>
+	<script src="services/auth-service.js"></script>
+
+	<script src="app.js"></script>
+
+</html>
