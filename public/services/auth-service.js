@@ -34,30 +34,69 @@ angular.module('EversnapServices')
             authorizationResult = false;
         }
 
-        service.getUserAlbums = function () {
+        function getUserAlbums () {
             //create a deferred object using Angular's $q service
             var deferred = $q.defer();
-            var promise = result.get('/me/albums')
+            var promise = authorizationResult.get('/me/albums')
                             .done(function (albumResponse)
                              {
-                                for(var i=0; i<albumResponse.data.length; i++)
-                                {
-                                    result.get('/' + albumResponse.data[i].id + '/photos')
-                                    .done(function (response) {
-                                        service.albums.push(response.data);
-                                        deferred.resolve();
-                                    })
-                                    .fail(function (err) {
-                                        $log.error(err);
-                                    });
-                                }
+                                deferred.resolve(albumResponse);
                             })
-                            .fail(function (err) {
+                            .fail(function (err) { 
                                 $log.error(err);
                                 //handle error with err
                             });
-            //return the promise of the deferred object
+            /* return the promise of the deferred object */
             return deferred.promise;
+        }
+
+        function getAlbumPhotos (albumResponse) 
+        {
+                var promises = [];
+                var deferred = $q.defer();
+                if (albumResponse.data.length > 0)
+                    {
+                        for(var i=0; i<albumResponse.data.length; i++)
+                        {
+                            // $log.log(i);
+                            (function(index)
+                                {                                       
+                                    var promise = 
+                                    authorizationResult.get('/' + albumResponse.data[index].id + '/photos')
+                                        .done(function (response)
+                                         {
+                                            if(response.data.length > 0)
+                                            {
+                                                $log.log('response');
+                                                $log.log(response);
+                                                var new_album = {
+                                                    id: albumResponse.data[index].id,
+                                                    galleryImagesData: response
+                                                }
+                                                return new_album;
+                                                // service.albums.push(new_album);
+                                                // deferred.resolve(service.albums);
+                                            }
+                                        })
+                                        .fail(function (err) {
+                                            $log.error(err);
+                                        });
+                                        // promise.responseJSON.id = albumResponse.data[index].id;
+                                        $log.log('promise')
+                                        $log.log(promise);
+                                    promises.push(promise);
+                                })(i);
+                        }
+                    }
+             return $q.all(promises);
+        }
+
+        service.getFacebookData = function () {
+            return getUserAlbums().
+                        then(function (allAlbums) {
+                            $log.log(allAlbums)
+                            return getAlbumPhotos(allAlbums);
+                        })
         }
 
         return service;

@@ -22,7 +22,7 @@ angular.module('Eversnap', [
 		controller: "GalleryCtrl"
 	})
 	.state('galleryDetail', {
-		url: "/galleryDetail",
+		url: "/gallery/:id",
 		templateUrl: "views/gallery-detail.html",
 		controller: "GalleryDetailCtrl"
 	})

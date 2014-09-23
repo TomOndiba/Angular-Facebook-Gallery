@@ -7,9 +7,9 @@
     </div>
     <div class="panel-body">
       <div class="row show-list">
-        <div class="col-xs-4 col-md-3 hoveredImage" ng-repeat="galleryImage in [1,2,3,4,5]">
+        <div class="col-xs-4 col-md-3 hoveredImage" ng-repeat="galleryImage in albums">
           <a href="/gallery/{{galleryImage._id}}">
-            <img class="img-rounded" src="http://cdn1.vox-cdn.com/assets/4229567/game-of-thrones-poster_85627-1920x1200.jpg" width="100%"/>
+            <img class="img-rounded" src="{{galleryImage.data[0].picture}}" width="100%"/>
           </a>
           <div class="text-center">
             <a href="/shows/{{show._id}}">{{show.name}}</a>
