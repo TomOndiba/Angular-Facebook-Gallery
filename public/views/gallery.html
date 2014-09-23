@@ -9,7 +9,7 @@
       <div class="row show-list">
         <div class="col-xs-4 col-md-3 hoveredImage" ng-repeat="galleryImage in albums">
           <a href="/gallery/{{galleryImage._id}}">
-            <img class="img-rounded" src="{{galleryImage.data[0].picture}}" width="100%"/>
+            <img class="img-rounded" ng-src="{{galleryImage.galleryImagesData.data[0].picture}}" width="100%"/>
           </a>
           <div class="text-center">
             <a href="/shows/{{show._id}}">{{show.name}}</a>

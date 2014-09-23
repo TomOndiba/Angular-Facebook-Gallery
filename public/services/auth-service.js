@@ -63,12 +63,12 @@ angular.module('EversnapServices')
                                 {                                       
                                     var promise = 
                                     authorizationResult.get('/' + albumResponse.data[index].id + '/photos')
-                                        .done(function (response)
+                                        .then(function (response)
                                          {
                                             if(response.data.length > 0)
                                             {
-                                                $log.log('response');
-                                                $log.log(response);
+                                                $log.log('id of album');
+                                                $log.log(albumResponse.data[index].id);
                                                 var new_album = {
                                                     id: albumResponse.data[index].id,
                                                     galleryImagesData: response
@@ -81,10 +81,8 @@ angular.module('EversnapServices')
                                         .fail(function (err) {
                                             $log.error(err);
                                         });
-                                        // promise.responseJSON.id = albumResponse.data[index].id;
-                                        $log.log('promise')
-                                        $log.log(promise);
-                                    promises.push(promise);
+                                    if(promise != undefined)
+                                        promises.push(promise);
                                 })(i);
                         }
                     }

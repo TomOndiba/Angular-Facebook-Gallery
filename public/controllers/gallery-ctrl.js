@@ -6,6 +6,7 @@ angular.module('EversnapControllers')
           .then(function(data) {
             $log.info('Data returned from facebook');
             // $log.log(data.data.length);
+            data = _.compact(data);
             $log.log(data);
             $scope.albums = data;
         });
