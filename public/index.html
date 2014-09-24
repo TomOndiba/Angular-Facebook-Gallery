@@ -10,10 +10,10 @@
 	<link href="stylesheets/simple-slider.css" rel="stylesheet">
 </head>
 <body>
-	<div ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top no-bottom nav-font"
+	<div class="navbar navbar-default navbar-static-top no-bottom nav-font"
      role="navigation" style="background: #0085CCl; height:52px;" >
 	  <div class="navbar-header" style="width: 226px; height: 52px">
-	    <a class="navbar-brand brand-hover" href="/#/gallery" style="font-size: 23px; width: 226px; height:100%; background: #036497; color: #B5E6FD">
+	    <a class="navbar-brand brand-hover" href="/#/home" style="font-size: 23px; width: 226px; height:100%; background: #036497; color: #B5E6FD">
 	      <span class="glyphicon glyphicon-home" style="font-size: 21px; padding-left: 5px"></span>
 	      <strong>EverSnap</strong></a>
 	  </div>
@@ -23,9 +23,6 @@
 	    </li> -->
 	    <li ng-class="{ active: $state.includes('gallery') }">
 	    	<a ui-sref="gallery">Gallery</a>
-	    </li>
-	    <li ng-class="{ active: $state.includes('anatomy') }">
-	    	<a ui-sref="anatomy">Gallery Details</a>
 	    </li>
 	  </ul>
 	</div>
@@ -55,9 +52,7 @@
 	<script src="controllers/gallery-detail-ctrl.js"></script>
   	<script src="controllers/navbar.js"></script>
 
-	<script src="services/anatomy-service.js"></script>
-	<script src="services/gallery-service.js"></script>
-	<script src="services/auth-service.js"></script>
+	<script src="services/facebook-service.js"></script>
 
 	<script src="app.js"></script>
 

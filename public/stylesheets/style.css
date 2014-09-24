@@ -855,6 +855,12 @@ img {
 .img-rounded {
   border-radius: 6px; }
 
+.img-size {
+  height: 200px;
+  width: 100%;
+  background-size: 200px;
+}
+
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
@@ -4792,7 +4798,11 @@ drawer-content-hidden {
       border-top: 0px; }
 
 .panel-body p {
-  color: #CCC9C9;
+  color: rgb(59, 89, 152);
+  font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  float: left;
   cursor: pointer; }
 
 .panel-group .panel + .panel {
@@ -4852,4 +4862,14 @@ drawer-content-hidden {
   color: #fff;
   background-color: #3b5998;
   border: 1px solid #37538d;
+}
+
+.img-hover {
+    -webkit-transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.img-hover:hover {
+    opacity: 0.9;
+   -webkit-transform: scale(1.03);
 }

@@ -7,13 +7,16 @@
     </div>
     <div class="panel-body">
       <div class="row show-list">
-        <div class="col-xs-4 col-md-3 hoveredImage" ng-repeat="galleryImage in albums">
-          <a href="/gallery/{{galleryImage._id}}">
-            <img class="img-rounded" ng-src="{{galleryImage.galleryImagesData.data[0].picture}}" width="100%"/>
+        <div class="col-xs-4 col-md-3 img-hover" ng-repeat="galleryImage in albums">
+          <a href="#/gallery/{{galleryImage.id}}">
+            <div class="img-rounded img-size" ng-style="{'background-image': 'url({{galleryImage.galleryImagesData.data[0].images[0].source}})'}">
+            </div>
+
           </a>
           <div class="text-center">
-            <a href="/shows/{{show._id}}">{{show.name}}</a>
-            <p class="text-muted">Episodes: {{show.episodes.length}}</p>
+            <a href="#/gallery/{{galleryImage.id}}">{{show.name}}</a>
+            <p style="display: inline-block">{{galleryImage.name}}</p>
+            <p style="display:inline-block; float:right; font-weight: 400">2 photos</p>
           </div>
         </div>
       </div>

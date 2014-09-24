@@ -1,17 +1,17 @@
 angular.module('EversnapControllers', [])
 
-.controller('LoginCtrl', function ($scope, AuthService, $log, $state) {
+.controller('LoginCtrl', function ($scope, FacebookService, $log, $state) {
 
 	/*
 		Facebook Login goes here.
 	*/
 
-	AuthService.initialize();
+	FacebookService.initialize();
 
 	$scope.facebookLogin = function() {
-	    AuthService.connectFacebook()
+	    FacebookService.connectFacebook()
 	    	.then(function() {
-		        if (AuthService.isReady()) {
+		        if (FacebookService.isReady()) {
 		        	$log.log('Auth was successfull in Login ctrl')
 		        /*
 		        	If the authorization is successful,

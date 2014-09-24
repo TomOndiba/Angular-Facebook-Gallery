@@ -26,9 +26,4 @@ angular.module('Eversnap', [
 		templateUrl: "views/gallery-detail.html",
 		controller: "GalleryDetailCtrl"
 	})
-	.state('anatomy', {
-		url: "/anatomy",
-		templateUrl: "views/anatomy.html",
-		controller: "AnatomyCtrl"
-	})
 });

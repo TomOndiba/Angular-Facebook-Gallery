@@ -1,8 +1,8 @@
 angular.module('EversnapControllers')
 
-.controller('GalleryCtrl', function ($scope, AuthService, $log) {
+.controller('GalleryCtrl', function ($scope, FacebookService, $log) {
 
-        AuthService.getFacebookData()
+        FacebookService.getFacebookData()
           .then(function(data) {
             $log.info('Data returned from facebook');
             // $log.log(data.data.length);
