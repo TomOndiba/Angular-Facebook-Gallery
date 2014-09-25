@@ -1,4 +1,4 @@
-EverSnap Project
+Eversnap Project
 ========================
 
 About
@@ -27,7 +27,7 @@ Controllers:
  GalleryDetailCtrl fetches the details of each album's gallery photos
 
 Views:
- Home
+ Home contains Facebook Login
  Gallery contains Album thumbnails
  Gallery detail contains thumbnails of each individual photo of the selected Album.
 
@@ -39,15 +39,18 @@ The app can be run via 3 ways.
 Running 'nodemon server.js' will host the app on localhost:3000
 Running 'gulp' will also host the app on localhost:3000
 
-Access deployed app on heroku.
-
+(If the above two fail) :
+Deployed app on heroku.
 http://gentle-harbor-9841.herokuapp.com
+
+I have tested this app through my facebook account and I'm able to retrieve all albums and their images.
+
 
 Side Notes
 =========
 
 I sincerely hope that I completed all the requirements as I put my complete effort in building this project. 
-I hope I get an opportunity to work with the team at Eversnap this summer 
+I hope I get an opportunity to work with the team at Eversnap this summer.
 
 PS: The app uses Eversnap's logo which is used only for demonstration purposes.
 

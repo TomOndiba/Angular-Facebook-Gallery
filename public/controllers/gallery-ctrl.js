@@ -1,3 +1,6 @@
+/*
+	Gallery Controller
+*/
 angular.module('EversnapControllers')
 
 .controller('GalleryCtrl', function ($scope, FacebookService, $log) {

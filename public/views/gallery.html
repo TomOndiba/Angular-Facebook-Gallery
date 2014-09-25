@@ -17,6 +17,9 @@
             <p class="photo-count">2 photos</p>
           </div>
         </div>
+        <div ng-show="albums.length == 0" class="text-center error-text">
+            <p>Loading {{albums.length}} albums...</p>
+        </div>
       </div>
     </div>
   </div>

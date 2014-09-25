@@ -1,3 +1,7 @@
+/*
+	Gallery Detail Controller
+*/
+
 angular.module('EversnapControllers')
 
 .controller('GalleryDetailCtrl', function ($scope, FacebookService, $log, $stateParams, $modal) {

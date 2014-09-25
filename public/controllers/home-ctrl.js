@@ -1,18 +1,23 @@
+/*
+	Home Controller
+*/
 angular.module('EversnapControllers', [])
 
 .controller('LoginCtrl', function ($scope, FacebookService, $log, $state) {
 
 	/*
-		Facebook Login goes here.
+		Facebook Auth Initialize using oauth.io
 	*/
 
 	FacebookService.initialize();
 
+	/*
+		Login 
+	*/
 	$scope.facebookLogin = function() {
 	    FacebookService.connectFacebook()
 	    	.then(function() {
 		        if (FacebookService.isReady()) {
-		        	$log.log('Auth was successfull in Login ctrl')
 		        /*
 		        	If the authorization is successful,
 		        	move onto Gallery View 
