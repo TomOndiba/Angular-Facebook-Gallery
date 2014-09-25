@@ -27,7 +27,7 @@ gulp.task('dev', function() {
   gulp.watch(paths.sass, ['sass']);
   // start a connect server to test app locally
   connect.server({
-    root: 'www',
+    root: 'public',
     port: 3000,
     livereload: true
   });

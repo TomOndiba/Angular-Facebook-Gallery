@@ -12,7 +12,6 @@ body {
   height: 100%;
     background-image: url('http://franceschinifamily.net/img/vacation89collage.jpg');
  background-size: 300%;
- background-repeat: no-repeat;
    }
 }
 
@@ -27,11 +26,11 @@ body {
 
 .full-height {
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.5)
 }
 
 .home-container {
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5)
 }
 
 .image-container {
@@ -3791,7 +3790,9 @@ a.list-group-item-danger {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
-  border-top-left-radius: 3px; }
+  border-top-left-radius: 3px;
+  box-shadow: 3px 10px 53px 3px rgba(167, 206, 165, 0.86);
+   }
   .panel-heading > .dropdown .dropdown-toggle {
     color: inherit; }
 
@@ -4820,8 +4821,9 @@ em {
   font-size: 28px;
   font-weight: 100;
     color: black;
-    font-family: 'Hammersmith One', sans-serif;
     text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+    font-weight: bold;
+  font-family: Rokkitt, serif;
 }
 
 /* Navbar */
