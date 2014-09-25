@@ -10,10 +10,10 @@
 	<link href="stylesheets/simple-slider.css" rel="stylesheet">
 </head>
 <body>
-	<div class="navbar navbar-default navbar-static-top no-bottom nav-font"
-     role="navigation" style="background: #0085CCl; height:52px;" >
-	  <div class="navbar-header" style="width: 226px; height: 52px">
-	    <a class="navbar-brand brand-hover" href="/#/home" style="font-size: 23px; width: 226px; height:100%; background: #036497; color: #B5E6FD">
+	<div class="navbar navbar-default navbar-static-top no-bottom nav-font custom-nav"
+     role="navigation" >
+	  <div class="navbar-header header-size">
+	    <a class="navbar-brand title" href="/#/home">
 	      <span class="glyphicon glyphicon-home" style="font-size: 21px; padding-left: 5px"></span>
 	      <strong>EverSnap</strong></a>
 	  </div>
@@ -22,12 +22,12 @@
 	    	<a ui-sref="home">Home</a>
 	    </li> -->
 	    <li ng-class="{ active: $state.includes('gallery') }">
-	    	<a ui-sref="gallery">Gallery</a>
+	    	<a ui-sref="gallery" style="color:#FFFFFF">Albums</a>
 	    </li>
 	  </ul>
 	</div>
 
-<div ui-view></div>
+<div ui-view class="full-height"></div>
 
 	<script src="vendor/angular.js"></script>
 	<script src="vendor/angular-strap.js"></script>

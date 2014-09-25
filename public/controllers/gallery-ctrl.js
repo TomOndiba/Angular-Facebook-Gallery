@@ -4,10 +4,8 @@ angular.module('EversnapControllers')
 
         FacebookService.getFacebookData()
           .then(function(data) {
-            $log.info('Data returned from facebook');
-            // $log.log(data.data.length);
+          	/* To remove undefined entries */
             data = _.compact(data);
-            $log.log(data);
             $scope.albums = data;
         });
 })
