@@ -38,28 +38,33 @@ angular.module('EversnapServices', [])
         }
 
         service.clearCache = function() {
-            OAuth.clearCache('twitter');
+            OAuth.clearCache('facebook');
             authorizationResult = false;
         }
 
+        /*
+            Returns a promise which resolves to all albums of a user.
+        */
         service.getFacebookData = function () {
     		return getUserAlbums().
-                then(function (allAlbums) {
-                    return getAlbumPhotos(allAlbums);
-                });
+                        then(function (allAlbums) {
+                            return getAlbumPhotos(allAlbums);
+                        });
         }
 
+        /*
+            Returns a promise which resolves to pictures inside a particular album 
+        */
         service.getDetails = function(albumId) {
             return getAlbumPictures(albumId).
                         then(function (allAlbumPictures) {
                         	service.allAlbumPictures = allAlbumPictures;
-                        	$log.log(service.allAlbumPictures)
                             return allAlbumPictures;
                         });
         }
 
         /*
-		Returns an array of user's albums.
+	Returns an array of user's albums.
         */
 
 	function getUserAlbums () {
@@ -79,7 +84,7 @@ angular.module('EversnapServices', [])
         }
 
         /*
-			Returns an array containing images for each of the albums. 
+            Returns an array containing images for each of the albums. 
         */
 
         function getAlbumPhotos (albumResponse) 
@@ -98,8 +103,6 @@ angular.module('EversnapServices', [])
                                          {
                                             if(response.data.length > 0)
                                             {
-                                                // $log.log('id of album');
-                                                // $log.log(albumResponse.data[index].id);
                                                 var new_album = {
                                                     id: albumResponse.data[index].id,
                                                     name: albumResponse.data[index].name,
@@ -119,7 +122,9 @@ angular.module('EversnapServices', [])
              return $q.all(promises);
         }
 
-        /* Returns an array of images inside a particular album */
+        /* 
+            Returns an array of images inside a particular album 
+        */
 
         function getAlbumPictures (albumId) {
             var deferred = $q.defer();
@@ -135,5 +140,6 @@ angular.module('EversnapServices', [])
             /* return the promise of the deferred object */
             return deferred.promise;
         }
-	return service;
+
+    return service;
 });

@@ -13,6 +13,11 @@ body {
     background-image: url('http://franceschinifamily.net/img/vacation89collage.jpg');
  background-size: 300%;
    }
+  .img-size {
+    height: 6em;
+    width: 100%;
+    background-size: cover;
+  }
 }
 
 @media only screen and (min-width : 481px) {
@@ -22,6 +27,12 @@ body {
     background-image: url('http://franceschinifamily.net/img/vacation89collage.jpg');
  background-size: 200%;
    }
+
+  .img-size {
+    height: 11em;
+    width: 100%;
+    background-size: cover;
+  }
 }
 
 
@@ -32,6 +43,11 @@ body {
     background-image: url('http://franceschinifamily.net/img/vacation89collage.jpg');
  background-size: 100%;
    }
+  .img-size {
+    height: 14em;
+    width: 100%;
+    background-size: cover;
+  }
 }
 
 .full-height {
@@ -899,12 +915,6 @@ img {
 .img-rounded {
   border-radius: 6px; }
 
-.img-size {
-  height: 200px;
-  width: 100%;
-  background-size: cover;
-}
-
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
@@ -947,6 +957,15 @@ img {
 .gallery-image-name {
   font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
   font-size: 12px;
+  display: inline-block;
+  float: left;
+  color: #3b5998;
+  font-weight: bold;
+}
+
+.comments-text {
+  font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+  font-size: 14px;
   display: inline-block;
   float: left;
   color: #3b5998;
@@ -3015,6 +3034,10 @@ tbody.collapse.in {
   color: green;
 }
 
+.custom-brand {
+  font-size: 21px; padding-left: 5px
+  }
+
 .navbar-toggle {
   position: relative;
   float: right;
@@ -4859,4 +4882,8 @@ box-shadow: 3px 10px 53px 3px rgba(64,108,161,1);
 .img-hover:hover {
     opacity: 0.9;
    -webkit-transform: scale(1.03);
+}
+
+.color-white {
+  color: #FFFFFF !important;
 }

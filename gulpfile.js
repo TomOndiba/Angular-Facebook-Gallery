@@ -11,17 +11,6 @@ var paths = {
   sass: ['./scss/**/*.scss']
 };
 
-gulp.task('sass', function(done) {
-  gulp.src('./scss/ionic.app.scss')
-    .pipe(sass({
-      errLogToConsole: true
-    }))
-    .pipe(minifyCss())
-    .pipe(gulp.dest('./www/css'))
-    .pipe(connect.reload())
-    .on('end', done);
-});
-
 gulp.task('dev', function() {
   // watch for sass changes
   gulp.watch(paths.sass, ['sass']);
