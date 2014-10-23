@@ -13,7 +13,7 @@ angular.module('AppServices', [])
     
     /* Initialize OAuth.io with public key of the application */
         service.initialize = function() {
-            OAuth.initialize(process.env.DB_URLkey, {cache:true});
+            OAuth.initialize(key, {cache:true});
         },
         service.isReady = function() {
             return (authorizationResult);
