@@ -1,7 +1,7 @@
 /*
 	Home Controller
 */
-angular.module('EversnapControllers', [])
+angular.module('AppControllers', [])
 
 .controller('LoginCtrl', function ($scope, FacebookService, $log, $state) {
 

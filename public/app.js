@@ -1,11 +1,11 @@
-angular.module('Eversnap', [
+angular.module('MyApp', [
 	'ngCookies',
 	'ngResource',
 	'ngMessages',
 	'ui.router',
 	'ui.bootstrap',
-	'EversnapControllers',
-	'EversnapServices'
+	'AppControllers',
+	'AppServices'
 ])
 
 .config(function($stateProvider, $urlRouterProvider) {

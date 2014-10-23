@@ -37,10 +37,8 @@ Views:
 Running the App
 ========
 
-The app can be run via 3 ways.
+The app can be run via 2 ways.
 Running 'nodemon server.js' will host the app on localhost:3000
-Running 'gulp' will also host the app on localhost:3000
 
-(If the above two fail) :
 Deployed app on heroku.
 https://facebookgallery.herokuapp.com
