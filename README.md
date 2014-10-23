@@ -1,12 +1,14 @@
-Eversnap Project
+Facebook Gallery Integration with Angular + Twitter bootstrap + oAuth.io
 ========================
 
 About
 ========
 
-This project is a web assignment completed by Rakshit Shukla for their Summer Internship Application at Eversnap.
+This project is a clone of Facebook Gallery made in AngularJS and custom Twitter Bootstrap/Angular UI
 
-The application is made using AngularJS, Twitter Bootstrap and UI bootstrap as the front-end technologies and a small expressjs app for local testing.
+A Sample is: https://facebookgallery.herokuapp.com
+
+I also made a small expressjs app for local testing.
 
 The app incorporate's Facebook login via oauth.io
 
@@ -41,20 +43,4 @@ Running 'gulp' will also host the app on localhost:3000
 
 (If the above two fail) :
 Deployed app on heroku.
-http://gentle-harbor-9841.herokuapp.com
-
-I have tested this app through my facebook account and I'm able to retrieve all albums and their images.
-
-
-Side Notes
-=========
-
-I sincerely hope that I completed all the requirements as I put my complete effort in building this project. 
-I hope I get an opportunity to work with the team at Eversnap this summer.
-
-PS: The app uses Eversnap's logo which is used only for demonstration purposes.
-
-
-
-
-
+https://facebookgallery.herokuapp.com

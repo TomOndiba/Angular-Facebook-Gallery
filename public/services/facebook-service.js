@@ -13,7 +13,7 @@ angular.module('EversnapServices', [])
     
     /* Initialize OAuth.io with public key of the application */
         service.initialize = function() {
-            OAuth.initialize('8Bjzs-N_4AxpH-gR2CmfbKpHQ34', {cache:true});
+            OAuth.initialize(process.env.DB_URLkey, {cache:true});
         },
         service.isReady = function() {
             return (authorizationResult);
