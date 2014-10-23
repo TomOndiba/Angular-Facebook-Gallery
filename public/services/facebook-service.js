@@ -4,7 +4,7 @@
 	The service is implemented primarily using Promises and oauth sdk callbacks.
 */
 
-angular.module('AppServices', [])
+angular.module('EversnapServices', [])
 .factory('FacebookService', function($q, $log){
 
     authorizationResult = false;
@@ -13,7 +13,8 @@ angular.module('AppServices', [])
     
     /* Initialize OAuth.io with public key of the application */
         service.initialize = function() {
-            OAuth.initialize(key, {cache:true});
+            /* Sample oAuth Key */
+            OAuth.initialize('8Bjzs-N_4AxpH-gR2CmfbKpHQ34', {cache:true});
         },
         service.isReady = function() {
             return (authorizationResult);
