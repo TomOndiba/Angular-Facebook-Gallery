@@ -1,4 +1,7 @@
-Facebook Gallery Integration with Angular + Twitter bootstrap + oAuth.io
+Facebook Gallery Clone
+========================
+
+Angular + Twitter bootstrap + oAuth.io
 ========================
 
 About
