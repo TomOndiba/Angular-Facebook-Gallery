@@ -1,15 +1,10 @@
-Facebook Gallery Clone
-========================
+##Facebook Gallery Clone
 
-Angular + Twitter bootstrap + oAuth.io
-========================
+### Angular + Twitter bootstrap + oAuth.io
 
-About
-========
+This project is a clone of Facebook Gallery made in AngularJS and custom Twitter Bootstrap/Angular UI.
 
-This project is a clone of Facebook Gallery made in AngularJS and custom Twitter Bootstrap/Angular UI
-
-A Sample is: https://facebookgallery.herokuapp.com
+Sample: https://facebookgallery.herokuapp.com
 
 I also made a small expressjs app for local testing.
 
@@ -17,8 +12,7 @@ The app incorporate's Facebook login via oauth.io
 
 The galleries and the popup box with image are both designed to be responsive.
 
-App Structure
-========
+###App Structure
 
 The App is built using standard Angular directives, controllers and services and UI Router.
 
