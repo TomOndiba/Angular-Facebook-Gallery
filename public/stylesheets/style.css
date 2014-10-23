@@ -3822,19 +3822,28 @@ a.list-group-item-danger {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
 
 .panel-body {
-  padding: 15px; }
+  padding: 15px; 
+  -webkit-transition: all 1.2s ease-out;
+  -o-transition: all 1.2s ease-out;
+  transition: all 1.2s ease-out;
+  opacity: 0;
+  }
   .panel-body:before, .panel-body:after {
     content: " ";
     display: table; }
   .panel-body:after {
     clear: both; }
 
+.full {
+  opacity: 1;
+}
+
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
-  box-shadow: 3px 10px 53px 3px rgba(167, 206, 165, 0.86);
+  box-shadow: 3px 0px 10px 1px rgba(67, 87, 94, 0.86);
    }
   .panel-heading > .dropdown .dropdown-toggle {
     color: inherit; }
@@ -4836,7 +4845,7 @@ em {
   padding-left: 15px; }
 
 .navbar-brand {
-  background-color: #296B20;
+  background-color: #204C6B;
   transition: 0.25s all;
   margin-left: -15px; }
 
@@ -4849,9 +4858,10 @@ em {
       padding: 15px; }
 
 .custom-nav {
-  background: #61992D;
+  background: #5486B6;
+  box-shadow: 3px 3px 30px 3px rgba(67, 87, 94, 0.86);
   height:52px;
-  border-color: #61992D;
+  border-color: #36595F;
   opacity: 0.87;
 }
 
@@ -4864,9 +4874,9 @@ em {
   font-size: 28px;
   font-weight: 100;
     color: rgb(107, 107, 107);
-  text-shadow: 0px 0px 50px rgba(150, 226, 173, 1);
     font-weight: bold;
-  font-family: Rokkitt, serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 200;
 
 }
 
@@ -4880,9 +4890,13 @@ em {
   background-color: #3b5998;
   border: 1px solid #37538d;
   border-radius: 5px;
--webkit-box-shadow: 3px 10px 53px 3px rgba(64,108,161,1);
--moz-box-shadow: 3px 10px 53px 3px rgba(64,108,161,1);
-box-shadow: 3px 10px 53px 3px rgba(64,108,161,1);
+  -webkit-box-shadow: 3px 10px 53px 3px rgba(64,108,161,1);
+  -moz-box-shadow: 3px 10px 53px 3px rgba(64,108,161,1);
+  box-shadow: 3px 10px 53px 3px rgba(64,108,161,1);
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
 }
 
 .img-hover {

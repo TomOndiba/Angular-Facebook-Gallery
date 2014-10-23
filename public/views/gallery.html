@@ -3,7 +3,7 @@
     <div class="panel-heading">
         <p class="heading-text"><strong>Album Thumbnails</strong><p>
     </div>
-    <div class="panel-body">
+    <div class="panel-body" ng-class="{full: loaded}">
       <div class="row show-list">
         <div class="col-xs-4 col-md-3 img-hover" ng-repeat="galleryImage in albums">
           <a href="#/gallery/{{galleryImage.id}}">
